@@ -1,5 +1,7 @@
 # cat_campaign
 
+## Use node v20.9.0
+
 ## Project setup
 ```
 npm install
