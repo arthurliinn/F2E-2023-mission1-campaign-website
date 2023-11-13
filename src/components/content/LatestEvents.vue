@@ -1,6 +1,16 @@
 <template>
   <div class="latest_events">
-
+    <div class="top_banner">
+      <div class="title_container">
+        <div class="title_smallText">
+          <img src="/img/bigTitle_smallText.svg" alt="">
+          <img src="/img/bigTitle.svg" alt="">
+        </div>
+      </div>
+      <div class="candidate_img">
+          <img src="/img/candidate.png" alt="">
+      </div>
+    </div>
 
   </div>
 </template>
@@ -12,7 +22,5 @@ export default defineComponent ({
 });
 </script>
 <style lang="scss">
-  .latest_events{
-    height: 1783px;
-  }
+  @import '@/assets/scss/components/lastestEvents.scss';
 </style>

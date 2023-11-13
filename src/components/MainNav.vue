@@ -15,7 +15,7 @@
           <li><a>小額捐款</a></li>
         </ul>
       </div>
-      <div class="menu_mobile_btn" v-if="mediaWidth <= 1024">
+      <div class="menu_mobile_btn" id="menu_mobile_btn" @click="openMobileMenu" v-if="mediaWidth <= 1024">
         <img src="/img/menu_mobile.svg" alt="">
       </div>
     </div>
@@ -24,7 +24,7 @@
         <div class="logo_container">
           <img src="/img/Logo_White.png" alt="">
         </div>
-        <div class="close_btn">
+        <div class="close_btn" id="closeBtn" @click="closeMobileMenu">
           <img src="/img/close.svg" alt="">
         </div>
           
@@ -41,127 +41,50 @@
 </template>
 <script lang="ts">
 import { defineComponent } from 'vue';
+import { onMounted, ref } from 'vue';
 
 export default defineComponent({
   name: 'MainNav',
   setup(){
     const mediaWidth: number = window.innerWidth;
+    let MobileMenu = ref<HTMLElement | null > (null);
+
+    onMounted(()=>{
+      MobileMenu.value = document.querySelector(".mobile_nav");
+    });
+    
+    const openMobileMenu = () =>{
+      if(MobileMenu.value){
+        MobileMenu.value.style.display = 'block';
+        
+        setTimeout(()=>{
+          MobileMenu.value!.style.opacity = '1';
+        },300);
+      }
+    };
+
+    const closeMobileMenu = () =>{
+      if(MobileMenu.value){
+        MobileMenu.value.style.opacity = '0';
+        setTimeout(()=>{
+          MobileMenu.value!.style.display = 'none';
+        },300);
+      }
+    };
+
     return{
       mediaWidth,
+      openMobileMenu,
+      closeMobileMenu,
     }
-  }
+  },
+  
 
 });
 </script>
 <style lang="scss" scoped>
   @import '@/assets/scss/main.scss';
-  .main_nav{
-    display: flex;
-    height: 100px;
-    background-color: #FFFFFF ;
-  }
-
-  .nav_container{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    max-width: 1200px;
-    width: 62.5vw;
-    margin: 0 auto;
-  }
-
-  .logo_container{
-    max-width: 235.02px;
-    width: fit-content;
-  }
-
-  .menu{
-    max-width: 738.49px;
-    width: 61.540%;
-  }
-
-  .menu ul{
-    display: flex;
-    justify-content: space-between;
-  }
-  .menu ul li{
-    list-style: none;
-    cursor: pointer;
-    box-sizing: border-box;
-    padding: 10px 0;
-    &:hover{
-      border-bottom: 3px solid $mainColor;
-    }
-  }
-
+  @import '@/assets/scss/mainNav.scss';
   
-  .menu ul li a{
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 30px;
-  }
-
-  .mobile_top_block{
-    width: 100vw;
-    height: 65px;
-    background-color: $mainColor;
-  }
-  
-  .mobile_nav{
-    position: fixed;
-    top: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: 10;
-    background-color: $mainColor;
-  }
-
-  @media screen and (max-width: 1024px){
-    .main_nav{
-      flex-direction: column;
-    }
-
-    .nav_container{
-      height: 65.65px;
-    }
-
-    .logo_container{
-      max-width: 150px;
-    }
-    
-    .logo_container img{
-      width: 100%;
-    }
-    .menu_mobile_btn{
-      width: 30px;
-      height: 30px;
-    }
-
-    .mobile_nav{
-      padding-top: 65px;
-    }
-    .controll_panel{
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      top: 0;
-      height: 65px;
-      padding: 0 20px;
-    }
-    .mobile_nav ul{
-      display: flex;
-      flex-direction: column;
-    }
-
-    .mobile_nav ul li{
-      font-weight: 700;
-      font-size: 20px;
-      line-height: 30px;
-      color: #FFFFFF;
-      padding: 15px 0;
-      padding-right: 22px;
-      text-align: right;
-    }
-  }
   
 </style>
