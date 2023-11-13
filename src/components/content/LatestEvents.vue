@@ -11,6 +11,11 @@
           <img src="/img/candidate.png" alt="">
       </div>
     </div>
+    <div class="demands_container">
+      <div class="demands">
+        
+      </div>
+    </div>
 
   </div>
 </template>

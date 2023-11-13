@@ -1,20 +1,27 @@
 .top_banner{
   position: relative;
-  margin: 0
+  margin: 0;
+  max-width: 1200px;
 }
 
 .latest_events{
   height: 1783px;
 }
 
-.top_banner{
-  width: 1200px;
+.top_banner,.demands_container{
+  max-width: 1200px;
   margin: 0 auto;
+  overflow: hidden;
+}
+
+.demands_container{
+  height: auto;
 }
 
 .title_container{
   width: 65%;
   margin-top: 145px;
+  max-width: 700px;
 }
 
 .title_smallText{
@@ -25,6 +32,18 @@
 .candidate_img{
   position: absolute;
   top: 30px;
-  right: 228px;
+  right: 6%;
+
+}
+
+.demands{
+  position: absolute;
+  right: 0;
+  width: 90%;
+  max-width: 1080px;
+  height: 405px;
+  background: linear-gradient(0deg, #FAFAFA, #FAFAFA),linear-gradient(0deg, #4527A0, #4527A0);
+  border: 5px solid #4527A0;
+  box-shadow: -15px 20px 0px 0px #4527A0;
 
 }
