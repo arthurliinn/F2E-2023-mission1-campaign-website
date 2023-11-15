@@ -37,6 +37,11 @@
           </div>
         </div>
       </div>
+      <div class="events_container">
+        <div class="topic_title">
+          最新活動
+        </div> 
+      </div>
     </div>
   </div>
 </template>
