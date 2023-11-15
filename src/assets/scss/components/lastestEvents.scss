@@ -124,6 +124,55 @@
   font-weight: 700;
 }
 
+.event_cards_container{
+  width: 100%;
+  max-width: 1200px;
+  margin-top: 30px;
+  display: flex;
+  img{
+    display: block;
+    position: relative;
+  }
+  .left_card{
+    width: 45%;
+    max-width: 485px;
+    height: 495px;
+    background-color: #FAFAFA;
+    position: relative;
+    margin-right: 30px;
+    &::after{
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 0;
+      border: 25px solid;
+      border-color: transparent transparent #FAFAFA transparent;
+      bottom: 170px;
+      z-index: 2;
+      left: calc(50% - 20px);
+
+    }
+    h4{
+      color: #222222;
+      margin: 15px;
+      margin-bottom: 0px;
+    }
+    p{
+      padding: 15px;
+    }
+  }
+
+  .right_cards{
+    .card{
+      display: flex;
+      &:nth-child(1){
+        margin-bottom: 30px;
+      }
+      
+    }
+  }
+}
+
 
 @media screen and (max-width: 1024px){
   .demands_container {

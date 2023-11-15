@@ -39,8 +39,33 @@
       </div>
       <div class="events_container">
         <div class="topic_title">
-          最新活動
+          <img src="/img/new_Events.svg" alt="">
         </div> 
+        <div class="event_cards_container">
+          <div class="left_card">
+            <img src="/img/event1.jpg" alt="">
+            <h4>
+              參與台北寵物論壇 爭取貓咪友善環境
+            </h4>
+            <p class="body_medium">
+              炎炎夏日的周六，我走進了台北寵物論壇，帶著一副貓耳髮箍，決定要全力宣傳「貓咪至上」的理念！我相信，我們的都市中，每一隻貓咪都應該有自己的 VIP 休憩空間。
+            </p>
+          </div>
+          <div class="right_cards">
+            <div class="card">
+              <img src="/img/event2.jpg" alt="">
+              <p class="body_medium">
+                炎炎夏日的周六，我走進了台北寵物論壇，帶著一副貓耳髮箍，決定要全力宣傳「貓咪至上」的理念！我相信，我們的都市中，每一隻貓咪都應該有自己的 VIP 休憩空間。
+              </p>
+            </div>
+            <div class="card">
+              <img src="/img/event3.jpg" alt="">
+              <p class="body_medium">
+                炎炎夏日的周六，我走進了台北寵物論壇，帶著一副貓耳髮箍，決定要全力宣傳「貓咪至上」的理念！我相信，我們的都市中，每一隻貓咪都應該有自己的 VIP 休憩空間。
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
