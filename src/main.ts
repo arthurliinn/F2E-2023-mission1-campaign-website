@@ -2,5 +2,20 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
+//awsome swiper
+import SwiperClass, { Autoplay,Pagination } from 'swiper'
+import VueAwesomeSwiper from 'vue-awesome-swiper'
 
-createApp(App).use(store).use(router).mount('#app')
+
+// import swiper module styles
+import 'swiper/css'
+import 'swiper/css/pagination'
+// more module style...
+
+// use swiper modules
+SwiperClass.use([/* swiper modules... */])
+
+createApp(App).use(store).use(router).use(VueAwesomeSwiper).mount('#app')
+
+
+
