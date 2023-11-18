@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@700&display=swap');
+.small_donation{
+  height: 527px;
+  background: url('@/assets/images/bg-donate.png');
+  background-repeat: no-repeat;
+  background-position: -50%;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.donation_card{
+  margin-top: 45px;
+  margin-left: 155px;
+  max-width: 680px;
+  width: 40%;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 80px;
+}
+
+.donte_plan{
+  display: none;
+  flex-direction: column;
+  h4{
+    color: #222;
+  }
+
+  .plans_container{
+    display: flex;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 545px;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+  .plan{
+    width: 33%;
+    max-width: 175px;
+    border: 2px solid #A9A9A9;
+    padding: 15px;
+    cursor: pointer;
+    user-select: none;
+    border-radius: 8px;
+  }
+  .selected{
+    border: 3px solid #4527A0;
+  }
+
+  .custom_price{
+    display: flex;
+    border-radius: 8px;
+    padding: 20px 30px;
+    max-width: 550px;
+    width: 100%;
+    border: 2px solid #A9A9A9;
+    margin: 20px auto;
+    input{
+      border-radius: 8px;
+      max-width: 360px;
+      width: 100%;
+      height: 50px;
+      border: 1px solid #b9b9b9;
+      margin-left: 10px;
+      padding: 14px 12px;
+    }
+  }
+
+  .btn_container{
+    display: flex;
+    margin: 0 auto;
+    .btn_container{
+      margin-right: 10px;
+    }
+    .want_donate_btn{
+      margin-left: 10px;
+      cursor: pointer;
+    }
+  }
+}
+
+.money_shown{
+  .little_text{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #222;
+  }
+  .count_price{
+    .NT,.counter_number{
+      font-family: 'Noto Sans TC', sans-serif,'微軟正黑體';
+      font-weight: 700;
+      font-size: 60px;
+      line-height: 72px;
+      color: #4527A0;
+    }
+    .donate_button{
+      width: 220px;
+      margin: 0 auto;
+      margin-top: 20px;
+      cursor: pointer;
+    }
+    
+  }
+}
+.back_btn{
+  cursor: pointer;
+}
+
+.custom_price_mobile{
+  display: none;
+}
+
+@media screen and (max-width: 480px){
+  .donation_card{
+    max-width: 360px;
+    width: 95%;
+  }
+
+  .small_donation{
+    overflow: hidden;
+    background-position: 0;
+
+  }
+
+  .donation_card{
+    margin: 4.5px 16.5px;
+    margin-top: 20px;
+  }
+
+  .count_price{
+    span{
+      font-size: 30px !important;
+    }
+  }
+  .donte_plan {
+    .plans_container{
+      display: flex;
+      flex-wrap: wrap;
+      .plan{
+        width: 50%;
+      }
+      
+    }
+    .custom_price{
+      display: none;
+    }
+    .custom_price_mobile{
+      display: block;
+      h5{
+        font-size: 15px;
+      }
+      input{
+        width: 95%;
+        height: 40%;
+        border: 1px solid #b9b9b9;
+        font-size: 15px;
+      }
+    }
+
+  }
+  .btn_container{
+    width: 100%;
+    justify-content: center;
+    .back_btn{
+      width: 50%;
+      scale: .7;
+    }
+    .want_donate_btn{
+      width: 50%;
+      scale: .6;
+      margin-left: 0;
+
+    }
+  }
+
+
+}

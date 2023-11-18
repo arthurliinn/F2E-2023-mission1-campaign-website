@@ -4,7 +4,7 @@
     </div>
     <div class="nav_container">
       <div class="logo_container">
-        <img src="/img/Logo.png" alt="">
+        <img src="@/assets/images/Logo.png" alt="">
       </div>
       <div class="menu" v-if="mediaWidth > 1024">
         <ul>
@@ -16,16 +16,16 @@
         </ul>
       </div>
       <div class="menu_mobile_btn" id="menu_mobile_btn" @click="openMobileMenu" v-if="mediaWidth <= 1024">
-        <img src="/img/menu_mobile.svg" alt="">
+        <img src="@/assets/images/menu_mobile.svg" alt="">
       </div>
     </div>
     <div class="mobile_nav" v-if="mediaWidth <= 1024">
       <div class="controll_panel">
         <div class="logo_container">
-          <img src="/img/Logo_White.png" alt="">
+          <img src="@/assets/images/Logo_White.png" alt="">
         </div>
         <div class="close_btn" id="closeBtn" @click="closeMobileMenu">
-          <img src="/img/close.svg" alt="">
+          <img src="@/assets/images/close.svg" alt="">
         </div>
           
       </div>

@@ -1,0 +1,115 @@
+.policy_issues{
+  height: 578px;
+  background: #4527A0;
+  overflow: hidden;
+  .topic_title{
+    margin-top: 30px;
+    .mobile{
+      display: none
+    }
+  }
+  .issues_cards{
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-content: space-between;
+    margin-top: 30px;
+    .middle_card{
+      margin-top: 30px;
+      
+    }
+    .card{
+      max-width: 380px;
+      width: 33%;
+      height: 365px;
+      background-color: #FAFAFA;
+      padding: 15px;
+      border-radius: 8px;
+      &:hover{
+        .policy_span{
+          opacity: 0;
+          height: 0;
+        }
+      }
+      .policy_span{
+        max-width: 70px;
+        height: 35px;
+        border-radius: 8px 0px 8px 0px;
+        padding: 5pxs 10px 5px 10px;
+        background-color: #26A69A;
+        color:#FAFAFA;
+        line-height: 35px;
+        transition-duration: .3s;
+
+      }
+      h4{
+        color: #222;
+        text-align: left;
+        margin-bottom: 10px;
+        margin-top: 10px;
+      }
+      ul{
+        text-align: left;
+      }
+
+      li{
+        list-style: numbers;
+        list-style-position:inside;
+        color: #333;
+        line-height: 24px;
+        font-weight: 500;
+        user-select: none;
+      }
+    }
+  }  
+
+}
+
+
+@media screen and (max-width: 768px){
+
+  .policy_issues{
+    height: 1220px;
+    .topic_title{
+      margin-top: 20px;
+      margin-bottom: 15px;
+      max-height: 56px;
+      .PC{
+        display: none;
+      }
+      .mobile{
+        display: block;
+        margin: 0 auto;
+      }
+      
+    }
+    .issues_cards{
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .middle_card{
+        margin-top: 0;
+      }
+      .card{
+        max-width: 330px;
+        width: 90%;
+        height: auto;
+        margin-bottom: 20px;
+        h4{
+          font-size: 20px;
+        }
+        .body_medium{
+          font-size: 15px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 480px){
+  .policy_issues{
+    .issues_cards{
+      margin-top: 10px;
+    }
+  } 
+}

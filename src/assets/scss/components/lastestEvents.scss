@@ -288,6 +288,8 @@
     max-width: 353px;
   }
 
+
+
   .title_container{
     max-width: 345px;
     width: 95%;
@@ -348,12 +350,15 @@
 }
 
 @media screen and (max-width:768px){
+  .latest_events{
+    height: 1280px;
+  }
   .event_cards_container{
     display: none;
   }
   .event_cards_swiper_container{
     display: block;
-    max-width: 385px;
+    max-width: 430px;
     display: block;
     .swiper-container{
       width: 100%;
@@ -369,6 +374,7 @@
       margin-right: 30px;
       border-radius: 8px;
       overflow: hidden;
+      width: 100%;
       &::after{
         content: "";
         position: absolute;
@@ -379,6 +385,9 @@
         bottom: 245px;
         z-index: 2;
         left: calc(50% - 20px);
+      }
+      .text_container{
+        height: 170px;
       }
       .date{
         position: absolute;
@@ -409,9 +418,10 @@
       }
       img{
         width: 100%;
+        max-height: 200px;
       }
 
-      .body_medium{
+      .body_normal{
         text-overflow: ellipsis;
         display: -webkit-box;
         -webkit-box-orient: vertical;
@@ -424,7 +434,19 @@
     }
     .swiper-pagination{
       // max-width: 295px;
-      bottom: -300px !important;
+      bottom: -540px !important;
+    }
+  }
+  .event_cards_swiper_container{
+    .swiper-container {
+      overflow: hidden;
+    }
+    .swiper-pagination-bullet{
+      width: 12px;
+      height: 12px;
+    }
+    .swiper-pagination-bullet-active{
+      background: $mainColor;
     }
   }
 
