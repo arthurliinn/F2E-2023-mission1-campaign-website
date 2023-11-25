@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "counterup2": "^2.0.2",
+    "paroller.js": "^1.4.7",
     "vue": "^3.2.13",
     "vue-awesome-swiper": "^5.0.1",
     "vue-router": "^4.0.3",

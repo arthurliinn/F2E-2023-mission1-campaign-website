@@ -63,7 +63,7 @@ export default defineComponent({
   top: -175px;
   width: fit-content;
   margin-left: 7%;
-  .mobie{
+  .mobile{
     display: none;
   }
 }

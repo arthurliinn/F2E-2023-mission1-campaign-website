@@ -7,9 +7,17 @@
             <img class="small_text" src="@/assets/images/bigTitle_smallText.svg" alt="">
           </div>
           <div class="big_title_cointainer">
-            <img class="big_title" src="@/assets/images/bigTitle.svg" alt="">
-            <img class="big_title_mobile" src="@/assets/images/bigTitle_mobile.svg" alt="">
+            <div class="big_title">
+              <img src="@/assets/images/bigTitle.svg" alt="">
+            </div>
+            <div class="big_title_mobile">
+              <img class="big_title_mobile" src="@/assets/images/bigTitle_mobile.svg" alt="">
+            </div>
           </div>
+        </div>
+        <div class="background_words">
+          <img class="chinese_name" src="@/assets/images/chinese_name_title.svg" alt="">
+          <img class="chinese_name2" src="@/assets/images/Miao-Li-Han_title.svg" alt="">
         </div>
       </div>
       <div class="demands_container">
@@ -163,13 +171,14 @@ import Swiper, {
 import 'swiper/scss'
 Swiper.use([Autoplay, Pagination])
 
+require('paroller.js');
 export default defineComponent ({
   name:'LatestEvents"',
   components: {
   },
   setup(){
     onMounted(()=>{
-      const cards = new Swiper('.swiper_card', {
+      new Swiper('.swiper_card', {
         autoplay: {
           delay: 3000,
           stopOnLastSlide: false,

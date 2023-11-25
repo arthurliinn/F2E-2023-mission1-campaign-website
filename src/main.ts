@@ -3,7 +3,7 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 //awsome swiper
-import SwiperClass, { Autoplay,Pagination,} from 'swiper'
+import SwiperClass, { } from 'swiper'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 //Counter-Up2
 // import counterUp from 'counterup2'

@@ -58,7 +58,9 @@ export default defineComponent({
         MobileMenu.value.style.display = 'block';
         
         setTimeout(()=>{
-          MobileMenu.value!.style.opacity = '1';
+          if (MobileMenu.value) {
+            MobileMenu.value.style.opacity = '1';
+          }
         },300);
       }
     };
@@ -67,7 +69,9 @@ export default defineComponent({
       if(MobileMenu.value){
         MobileMenu.value.style.opacity = '0';
         setTimeout(()=>{
-          MobileMenu.value!.style.display = 'none';
+          if (MobileMenu.value) {
+            MobileMenu.value.style.display = 'none';
+          }
         },300);
       }
     };
