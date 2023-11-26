@@ -36,12 +36,22 @@
     position: absolute;
     right: 0;
     top: 20px;
+    transition: top 0.3s ease-in-out
   }
-  .chinese_name2{
-    position: absolute;
-    bottom: 20px;
-    left: 0;
-  }
+
+}
+
+.chinese_name2{
+  position: absolute;
+  bottom: 120px;
+  left: 21%;
+  transition: left 0.5s ease-in-out 
+}
+
+.straight_word{
+  position: absolute;
+  left: 18%;
+  bottom: -360px;
 }
 
 

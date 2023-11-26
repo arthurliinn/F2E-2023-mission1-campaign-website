@@ -1,5 +1,7 @@
 <template>
   <div class="latest_events">
+    <img class="chinese_name2" src="@/assets/images/Miao-Li-Han_title.svg" alt="">
+    <img class="straight_word" src="@/assets/images/KEEP-IT-POSSIBLE_title.svg" alt="">
     <div class="top_banner_content">
       <div class="top_banner">
         <div class="title_container">
@@ -7,7 +9,7 @@
             <img class="small_text" src="@/assets/images/bigTitle_smallText.svg" alt="">
           </div>
           <div class="big_title_cointainer">
-            <div class="big_title">
+            <div class="big_title paroller">
               <img src="@/assets/images/bigTitle.svg" alt="">
             </div>
             <div class="big_title_mobile">
@@ -17,7 +19,6 @@
         </div>
         <div class="background_words">
           <img class="chinese_name" src="@/assets/images/chinese_name_title.svg" alt="">
-          <img class="chinese_name2" src="@/assets/images/Miao-Li-Han_title.svg" alt="">
         </div>
       </div>
       <div class="demands_container">
@@ -162,13 +163,14 @@
   </div>
 </template>
 <script lang="ts">
-import { defineComponent, onMounted } from "vue";
+import { defineComponent, onMounted ,ref} from "vue";
 import Swiper, {
   Autoplay,
   Pagination,
 } from 'swiper'
 
 import 'swiper/scss'
+import { ConstantTypes } from "@vue/compiler-core";
 Swiper.use([Autoplay, Pagination])
 
 require('paroller.js');
@@ -177,6 +179,8 @@ export default defineComponent ({
   components: {
   },
   setup(){
+    let title1 = ref<HTMLElement | null > (null);
+    let title2 = ref<HTMLElement | null > (null);
     onMounted(()=>{
       new Swiper('.swiper_card', {
         autoplay: {
@@ -191,8 +195,34 @@ export default defineComponent ({
         pagination: {
           el: '.swiper-pagination'
         },
-      })
+      });
+
+      title1.value = document.querySelector('.chinese_name');
+      title2.value = document.querySelector('.chinese_name2');
     })
+    function handleScroll(): void{
+
+      const scrollDistance: number = window.scrollY || window.pageYOffset;
+      const viewportHeight: number = window.innerHeight;
+      const scrollPercentL: number = Math.floor((scrollDistance/viewportHeight)*100);
+      console.log('滾動距離:', scrollDistance);
+      console.log('%',scrollPercentL);
+      if(title1.value){
+        let targetPosition: number = 20 + ((700/100)*scrollPercentL);
+        if(targetPosition >= 265 ){
+          targetPosition = 265;
+        }
+        title1.value.style.top = `${targetPosition}px`;
+        console.log('移動',title1.value.style.top);
+      }
+      if(title2.value){
+        let viewportWidth: number = window.innerWidth;
+        let targetPosition: number =  ((viewportWidth/100)*21) + ((viewportWidth/100)*scrollPercentL)*-1;
+        title2.value.style.left = `${targetPosition}px`;
+      }
+    }
+
+    window.addEventListener('scroll', handleScroll);
 
     
   }

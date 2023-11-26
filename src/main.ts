@@ -9,6 +9,7 @@ import VueAwesomeSwiper from 'vue-awesome-swiper'
 // import counterUp from 'counterup2'
 
 
+
 // import swiper module styles
 import 'swiper/css'
 import 'swiper/css/pagination'
